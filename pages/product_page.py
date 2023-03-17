@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 
 
 class ProductPage(BasePage):
-    def add_to_basket(self):
+    def add_item_to_basket(self):
         add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         add_to_basket_button.click()
 
@@ -19,3 +19,14 @@ class ProductPage(BasePage):
         assert self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text == \
                self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_IN_NOTIFICATION).text, \
                f"Product name is not equal to name in notification."
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def success_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is not disappeared, but should be"
+
+
+
