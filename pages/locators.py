@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK = (By.CSS_SELECTOR, ".btn-group a.btn.btn-default")
 
 
 class MainPageLocators():
@@ -12,6 +13,11 @@ class MainPageLocators():
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "form#login_form")
     REGISTRATION_FORM = (By.CSS_SELECTOR, "form#register_form")
+
+
+class BasketPageLocators():
+    NO_ITEM_TEXT = (By.CSS_SELECTOR, "#content_inner")
+    BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
 
 
 class ProductPageLocators():
