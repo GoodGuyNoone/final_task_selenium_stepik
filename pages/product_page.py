@@ -1,6 +1,5 @@
-from pages.locators import ProductPageLocators
-
 from pages.base_page import BasePage
+from pages.locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
@@ -21,12 +20,11 @@ class ProductPage(BasePage):
                f"Product name is not equal to name in notification."
 
     def should_not_be_success_message(self):
+        # verify that success message is not presented on page
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
-            "Success message is presented, but should not be"
+               "Success message is presented, but should not be"
 
     def success_message_should_disappear(self):
+        # verify that success message is disappeared
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is not disappeared, but should be"
-
-
-

@@ -1,9 +1,10 @@
-from .base_page import BasePage
 from pages.locators import LoginPageLocators
+from .base_page import BasePage
 
 
 class LoginPage(BasePage):
     def register_new_user(self, email, password):
+        # registration of new user
         self.browser.find_element(*LoginPageLocators.EMAIL_FIELD).send_keys(email)
         self.browser.find_element(*LoginPageLocators.PASSWORD_FIELD).send_keys(password)
         self.browser.find_element(*LoginPageLocators.CONFIRM_PASSWORD_FIELD).send_keys(password)
