@@ -60,6 +60,6 @@ Project Link: [https://github.com/GoodGuyNoone/final_task_selenium_stepik](https
 [telegram-shield]: https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white
 [telegram-url]: https://t.me/NOOOON3
 [gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[gmail-url]: churakovaleksandrqa@gmail.com
+[gmail-url]: mailto:churakovaleksandrqa@gmail.com
 [pytest-shield]:
 [pytest-url]:
